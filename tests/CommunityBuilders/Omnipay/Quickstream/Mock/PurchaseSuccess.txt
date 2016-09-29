@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+X-Server-Shutdown: false
+Content-Type: text/plain;charset=ISO-8859-1
+Content-Length: 357
+Date: Thu, 29 Sep 2016 05:53:42 GMT
+Set-Cookie: TS01e37f99=01ad73e7c8e9af68e0851fbbbef4acc501d808a447300f58584b2338a208ce61ec9b37d15e; Path=/
+
+response.summaryCode=0
+response.responseCode=08
+response.text=Honour with identification
+response.referenceNo=730998354
+response.orderNumber=350
+response.RRN=730998354   
+response.settlementDate=20160929
+response.transactionDate=29-SEP-2016 15:53:28
+response.cardSchemeName=VISA
+response.creditGroup=VI/BC/MC
+response.previousTxn=0
+response.end

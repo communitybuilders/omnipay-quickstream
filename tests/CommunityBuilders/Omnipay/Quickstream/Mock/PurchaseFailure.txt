@@ -1,0 +1,18 @@
+HTTP/1.1 200 OK
+X-Server-Shutdown: false
+Content-Type: text/plain;charset=ISO-8859-1
+Content-Length: 342
+Date: Thu, 29 Sep 2016 05:49:39 GMT
+Set-Cookie: TS01e37f99=01ad73e7c88e379fe99a09e8d4aaa6679e0636ecb0dbffed20431dc233c6d247aeffa30857; Path=/
+
+response.summaryCode=3
+response.responseCode=QA
+response.text=Duplicate order number with different order type
+response.referenceNo=730998273
+response.orderNumber=347
+response.RRN=730998273
+response.transactionDate=29-SEP-2016 15:49:39
+response.cardSchemeName=VISA
+response.creditGroup=VI/BC/MC
+response.previousTxn=0
+response.end
