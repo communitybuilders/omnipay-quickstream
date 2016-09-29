@@ -13,7 +13,7 @@ class CreateCardRequest extends AbstractRequest
 
         return array(
             "order.type"                       => "registerAccount",
-            "card.cardHolderName"              => (strlen($card->getName()) > 120 ? substr($card->getName(), 0, 120) : $card->getName()), //truncate card name to avoid error. Ticket #7097
+            "card.cardHolderName"              => substr($card->getName(), 0, 120), // Truncate card name to avoid error. Ticket #7097
             "card.PAN"                         => $card->getNumber(),
             "card.expiryYear"                  => $card->getExpiryDate("y"),
             "card.expiryMonth"                 => $card->getExpiryMonth(),

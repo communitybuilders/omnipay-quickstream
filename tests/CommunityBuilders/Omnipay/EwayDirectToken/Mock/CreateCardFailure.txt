@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+X-Server-Shutdown: false
+Content-Type: text/plain;charset=ISO-8859-1
+Content-Length: 140
+Date: Thu, 29 Sep 2016 05:24:53 GMT
+Set-Cookie: TS01e37f99=01ad73e7c8ef992714b38b244fd7aec7d0da44cf13c582cf51cd7623ee6dacd7e489723fdb; Path=/
+
+response.summaryCode=1
+response.responseCode=14
+response.text=Invalid card number (no such number)
+response.previousTxn=0
+response.end

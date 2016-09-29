@@ -1,0 +1,17 @@
+HTTP/1.1 200 OK
+X-Server-Shutdown: false
+Content-Type: text/plain;charset=ISO-8859-1
+Content-Length: 331
+Date: Thu, 29 Sep 2016 05:12:01 GMT
+Set-Cookie: TS01e37f99=01ad73e7c81ddaa4206924ebf53bc19d848a3d2ab2d8adec6b31e17c6b686e7e82bbfb4c9b; Path=/
+
+response.summaryCode=0
+response.responseCode=00
+response.text=Approved or completed successfully
+response.cardSchemeName=VISA
+response.creditGroup=VI/BC/MC
+response.accountAlias=444433...111
+response.preregistrationCode=NSWLPQ-25640218
+response.customerReferenceNumber=NSWLPQ-25640218
+response.previousTxn=0
+response.end
