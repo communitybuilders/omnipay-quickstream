@@ -9,7 +9,7 @@ class CreateCardRequestTest extends TestCase
     /** @var CreateCardRequest */
     protected $request;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->request = new CreateCardRequest($this->getHttpClient(), $this->getHttpRequest());
         $this->request->setCard($this->getValidCard());

@@ -23,25 +23,15 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         $data[ "customer.merchant" ] = $this->getCustomerId();
 
         // Also need a message.end parameter for some reason.
-        $data[ "message.end" ] = null;
+        $data[ "message.end" ] = '';
 
         // Create a request.
-        $http_request = $this->httpClient->post($this->getEndpoint(), null, $data);
+        $headers = ['Content-Type' => 'application/x-www-form-urlencoded'];
+        $http_response = $this->httpClient->request('POST', $this->getEndpoint(), $headers, http_build_query($data));
 
-        // Let's set our cURL certificate options for this request.
-        // (note: we could also do this by overriding the constructor for this
-        //  AbstractRequest, by first calling the parent constructor, then getting
-        //  the config for the cURL options from our httpClient
-        //  via "$this->httpClient->getConfig("curl.options")", then appending our certificates
-        //  to that array and setting it back to our client
-        //  config via "$this->httpClient->getConfig()->set("curl.options", $curl_options))."
-        $curl_options = $http_request->getCurlOptions();
-        $curl_options->set(CURLOPT_SSLCERT, $this->getSSLCertificate());
-        $curl_options->set(CURLOPT_FORBID_REUSE, true); // Not super necessary, but the QValentCardsAPI.php file uses it.
+        $body = $http_response->getBody()->getContents();
 
-        $http_response = $http_request->send();
-
-        return $this->response = new Response($this, $this->_parseResponseBody($http_response->getBody(true)));
+        return $this->response = new Response($this, $this->_parseResponseBody($body));
     }
 
     private function _parseResponseBody($body)

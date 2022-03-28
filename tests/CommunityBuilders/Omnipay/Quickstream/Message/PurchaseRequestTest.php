@@ -12,7 +12,7 @@ class PurchaseRequestTest extends TestCase
     /** @var PurchaseRequest */
     protected $request;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->request = new PurchaseRequest($this->getHttpClient(), $this->getHttpRequest());
         $this->request->setCustomerReference(self::TEST_CUSTOMER_REFERENCE);
@@ -22,14 +22,16 @@ class PurchaseRequestTest extends TestCase
 
     public function testNullAmountThrowsException()
     {
-        $this->setExpectedException(InvalidRequestException::class, "The amount parameter is required");
+        $this->expectException(InvalidRequestException::class);
+        $this->expectExceptionMessage("The amount parameter is required");
         $this->request->setAmount(null);
         $this->request->getData();
     }
 
     public function testNegativeAmountThrowsException()
     {
-        $this->setExpectedException(InvalidRequestException::class, "A negative amount is not allowed");
+        $this->expectException(InvalidRequestException::class);
+        $this->expectExceptionMessage("A negative amount is not allowed");
         $this->request->setAmount(-10.00);
         $this->request->getData();
     }
